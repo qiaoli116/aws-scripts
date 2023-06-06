@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 def to_seconds(time_unit, time_value):
     if time_unit == 'd':
         return time_value * 24 * 60 * 60
-    elif time_unit == 'h':
+    elif time_unit == 'H':
         return time_value * 60 * 60
     elif time_unit == 'm':
         return time_value * 60
@@ -19,13 +19,13 @@ def to_seconds(time_unit, time_value):
 # Parse duration argument
 parser = argparse.ArgumentParser()
 parser.add_argument('-d', type=int, default=0, help='Number of days')
-parser.add_argument('-h', type=int, default=0, help='Number of hours')
+parser.add_argument('-H', type=int, default=0, help='Number of hours')
 parser.add_argument('-m', type=int, default=0, help='Number of minutes')
 parser.add_argument('-s', type=int, default=0, help='Number of seconds')
 args = parser.parse_args()
 
 # Calculate total duration in seconds
-total_seconds = to_seconds('d', args.d) + to_seconds('h', args.h) + to_seconds('m', args.m) + args.s
+total_seconds = to_seconds('d', args.d) + to_seconds('H', args.H) + to_seconds('m', args.m) + args.s
 
 # Run AWS STS get-session-token command
 try:
