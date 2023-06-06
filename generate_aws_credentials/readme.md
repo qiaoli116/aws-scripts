@@ -29,6 +29,12 @@ The script generates the following output:
     -   `AWS_ACCESS_KEY_ID`: The generated access key ID.
     -   `AWS_SECRET_ACCESS_KEY`: The generated secret access key.
     -   `AWS_SESSION_TOKEN`: The generated session token.
+
+To unset the Environment Variables:
+```shell
+unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+```
+
 -   AWS CLI Configuration: The script also outputs AWS CLI configuration settings for the `[default]` profile. These settings include:
     
     -   `aws_access_key_id`: The generated access key ID.
@@ -36,7 +42,6 @@ The script generates the following output:
     -   `aws_session_token`: The generated session token.
 -   Expiration Time/Date: The script displays the expiration time/date of the temporary credentials.
     
-
 ## Error Handling
 
 The script includes error handling to capture and display any errors that may occur during the execution of the `aws sts get-session-token` command. If the command fails, an error message is printed, indicating the reason for the failure.
