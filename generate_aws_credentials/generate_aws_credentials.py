@@ -24,6 +24,11 @@ parser.add_argument('-m', type=int, default=0, help='Number of minutes')
 parser.add_argument('-s', type=int, default=0, help='Number of seconds')
 args = parser.parse_args()
 
+# Check if any arguments were provided
+if not any(vars(args).values()):
+    parser.print_help()
+    exit(0)
+
 # Calculate total duration in seconds
 total_seconds = to_seconds('d', args.d) + to_seconds('H', args.H) + to_seconds('m', args.m) + args.s
 
