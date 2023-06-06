@@ -15,7 +15,7 @@ This shell script generates temporary AWS credentials using the AWS Security Tok
 ## Usage
 
 ```shell
-./generate_credentials.sh -d days -h hours -m minutes -s seconds`` 
+./generate_credentials.sh -d days -h hours -m minutes -s seconds
 ```
 -   `-d` (optional): Specify the duration in days.
 -   `-h` (optional): Specify the duration in hours.
@@ -23,7 +23,7 @@ This shell script generates temporary AWS credentials using the AWS Security Tok
 -   `-s` (optional): Specify the duration in seconds.
 
 ``` shell
-python3 generate_aws_credentials.py -d <days> -H <hours> -m <minutes> -s <seconds>
+python3 generate_aws_credentials.py -d days -H hours -m minutes -s seconds
 ```
 -   `-d` (optional): Specify the duration in days.
 -   `-H` (optional): Specify the duration in hours.
