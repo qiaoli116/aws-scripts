@@ -4,9 +4,13 @@ This shell script generates temporary AWS credentials using the AWS Security Tok
 
 ## Prerequisites
 
-- AWS CLI: Ensure that the AWS CLI is installed and configured with the necessary credentials and region. You can install it by following the instructions in the [AWS CLI User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
+- AWS CLI: Ensure that the AWS CLI is installed and configured with the necessary credentials and region. You can install it by following the instructions in the [AWS CLI User Guide]([https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)).
 
-- `jq`: The script relies on the `jq` command-line tool for processing JSON output. Make sure `jq` is installed on your system. You can install it using your system's package manager or refer to the [jq website](https://stedolan.github.io/jq/) for installation instructions.
+- For generate_aws_credentials.sh
+    - `jq`: The script relies on the `jq` command-line tool for processing JSON output. Make sure `jq` is installed on your system. You can install it using your system's package manager or refer to the [jq website](https://stedolan.github.io/jq/) for installation instructions.
+
+- For generate_aws_credentials.py
+    - Python 3 needs to be installed 
 
 ## Usage
 
@@ -18,7 +22,15 @@ This shell script generates temporary AWS credentials using the AWS Security Tok
 -   `-m` (optional): Specify the duration in minutes.
 -   `-s` (optional): Specify the duration in seconds.
 
-Note: If any of the time units are not set, they are considered as 0.
+``` shell
+python3 generate_aws_credentials.py -d <days> -H <hours> -m <minutes> -s <seconds>
+```
+-   `-d` (optional): Specify the duration in days.
+-   `-H` (optional): Specify the duration in hours.
+-   `-m` (optional): Specify the duration in minutes.
+-   `-s` (optional): Specify the duration in seconds.
+
+Note: at least one argument (days, hours, minutes, or seconds) must be provided to set a valid duration. If no arguments are provided, the script will display the usage information.
 
 ## Output
 
