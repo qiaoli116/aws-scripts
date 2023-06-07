@@ -99,6 +99,7 @@ echo "----------------------------------------"
 echo "Credentials will expire at: $expiration"
 echo "----------------------------------------"
 
+echo ""
 echo "other userful commands"
 echo "export CDK_DEPLOY_ACCOUNT=$aws_account_id"
 echo "export CDK_DEPLOY_REGION=$current_region"
