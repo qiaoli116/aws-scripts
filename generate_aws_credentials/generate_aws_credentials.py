@@ -74,19 +74,17 @@ except subprocess.CalledProcessError as e:
     print("Failed to retrieve session token:", e.output.strip())
     exit(1)
 
-print("AWS Account ID:", account_id)
 
 # Retrieve Current Region
 if 'AWS_REGION' in os.environ:
     current_region = os.environ['AWS_REGION']
 else:
     current_region = 'us-east-1'
-print("Current Region:", current_region)
 
 print("----------------------------------------")
 print(f"other userful commands")
-print(f"export CDK_DEPLOY_ACCOUNT={aws_account_id}")
+print(f"export CDK_DEPLOY_ACCOUNT={account_id}")
 print(f"export CDK_DEPLOY_REGION={current_region}")
-print(f"export CDK_DEFAULT_ACCOUNT={aws_account_id}")
+print(f"export CDK_DEFAULT_ACCOUNT={account_id}")
 print(f"export CDK_DEFAULT_REGION={current_region}")
 
