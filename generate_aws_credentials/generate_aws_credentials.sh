@@ -75,6 +75,15 @@ secret_key=$(echo "$output" | jq -r '.Credentials.SecretAccessKey')
 session_token=$(echo "$output" | jq -r '.Credentials.SessionToken')
 expiration=$(echo "$output" | jq -r '.Credentials.Expiration')
 
+aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
+if [[ -n "$AWS_REGION" ]]; then
+  current_region="$AWS_REGION"
+else
+  current_region="<target-region>"
+fi
+# Echo the values
+
+
 # Print output
 echo "calling aws sts get-session-token --duration-seconds $total_seconds"
 echo "----------------------------------------"
@@ -88,3 +97,8 @@ echo "aws_secret_access_key=$secret_key"
 echo "aws_session_token=$session_token"
 echo "----------------------------------------"
 echo "Credentials will expire at: $expiration"
+echo "----------------------------------------"
+echo "export CDK_DEPLOY_ACCOUNT=$aws_account_id"
+echo "export CDK_DEPLOY_REGION=$current_region"
+echo "export CDK_DEFAULT_ACCOUNT=$aws_account_id"
+echo "export CDK_DEFAULT_REGION=$current_region"
