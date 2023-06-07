@@ -82,7 +82,7 @@ else:
     current_region = 'us-east-1'
 
 print("----------------------------------------")
-print(f"other userful commands")
+print(f"\nother userful commands:")
 print(f"export CDK_DEPLOY_ACCOUNT={account_id}")
 print(f"export CDK_DEPLOY_REGION={current_region}")
 print(f"export CDK_DEFAULT_ACCOUNT={account_id}")
