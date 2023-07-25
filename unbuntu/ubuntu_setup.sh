@@ -20,6 +20,8 @@ sudo pip3 install pipenv
 sudo apt-get install -y docker.io
 # install docker-compose
 sudo apt-get install -y docker-compose
+# install curl
+sudo apt-get install -y curl
 # install awscli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
