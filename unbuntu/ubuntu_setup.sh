@@ -6,8 +6,12 @@ sudo apt-get upgrade -y
 sudo apt-get install -y unzip
 # install git
 sudo apt-get install -y git
-# install nodejs
-sudo apt-get install -y nodejs
+# install nodejs !! if nodejs version is not right, use nvm to install node
+# sudo apt-get install -y nodejs
+wget https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
+bash install.sh
+source ~/.bashrc
+nvm install v18
 # install npm
 sudo apt-get install -y npm
 # install python3
