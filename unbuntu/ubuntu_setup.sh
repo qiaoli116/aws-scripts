@@ -33,5 +33,9 @@ sudo ./aws/install
 rm -rf awscliv2.zip aws
 # install aws cdk
 npm install -g aws-cdk
+# install ssh
+sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl enable ssh
 
 
