@@ -51,6 +51,9 @@ rm phpMyAdmin-latest-all-languages.tar.gz
 # Start MySQL if not running
 sudo systemctl start mariadb
 
+# Enable MySQL to start on boot
+sudo systemctl enable mariadb
+
 # Clean up
 rm /var/www/html/phpinfo.php
 
